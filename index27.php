@@ -17,6 +17,8 @@
 </html>
 
 <?php
+
+//FOR LOOP
 if(isset($_POST['submit'])){
     $N1 = $_POST['n1'];
     for($i=1;$i<=$N1;$i++){
@@ -26,4 +28,37 @@ if(isset($_POST['submit'])){
         echo "<br>";
     }    
 }
+
+
+//WHILE LOOP
+if(isset($_POST['submit'])){
+    $N1 = $_POST['n1'];
+    $i = 1;
+    while($i <= $N1){
+        $j = 1;
+        while($j<=$i){
+            echo $j;
+            $j++;
+        }
+        $i++;
+        echo "<br>";
+    }
+}
+
+
+//DO WHILE LOOP
+if(isset($_POST['submit'])){
+    $N1 = $_POST['n1'];
+    $i = 1;
+    do{
+        $j = 1;
+        do{
+            echo $j;
+            $j++;
+        }while($j<=$i);
+        echo "<br>";
+        $i++;
+    }while($i <= $N1);
+}
+
 ?>
